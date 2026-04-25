@@ -22,20 +22,19 @@ class SavingsAccount extends Account {
     System.out.println("Interest Applied: " + interest +"to" + accountHolder + ". New Balance: " + balance);
   }
 }
- class PremiumSavingAccount extends SavingAccount{
+ class PremiumSavingAccount extends SavingsAccount{
     double bonusRate;
 
     void applybonusRate(){
-        double bonus= balance * bonusRate / 100;
+        double bonus = balance * bonusRate / 100;
         balance += bonus;
          System.out.println("Premium Interest Applied: " + bonus +"to" + accountHolder + ". New Balance: " + balance);
     }
  }
 
-public class Single_Inheritance {
+public class Multilevel_Inheritance {
   public static void main(String[] args) {
     PremiumSavingAccount psa = new PremiumSavingAccount();
-    psa = PremiumSavingAccount;
     psa.accountHolder = "Pranav";
     psa.balance = 2000;
     psa.interestRate = 5;
